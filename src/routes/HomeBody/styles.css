@@ -1,0 +1,9 @@
+.section-title h1 {
+  font-size: 26px;
+  color: var(--dsc-color-font-primary);
+}
+
+.section-description p {
+  font-size: 16px;
+  color: var(--dsc-color-font-tertiary);
+}
