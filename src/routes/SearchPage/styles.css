@@ -1,0 +1,31 @@
+.card {
+  margin-top: 54px;
+  height: 270px;
+  background-color: var(--dsc-color-card-bg);
+  padding: 54px 32px;
+  border-radius: 16px;
+}
+
+.card h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 298px;
+  height: 40px;
+  border: 1px solid var(--dsc-color-card-border-primary);
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin-top: 12px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar input::placeholder {
+  color: var(--dsc-color-font-placeholder-primary);
+  font-size: 14px;
+}

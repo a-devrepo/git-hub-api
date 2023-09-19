@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import ButtonPrimary from '../../components/ButtonPrimary';
 import './styles.css';
 
@@ -13,7 +14,9 @@ export default function HomeBody() {
                     <div className="section-description">
                         <p>DevSuperior - Escola de Programação</p>
                     </div>
-                    <ButtonPrimary name="Começar" />
+                    <Link to="/search">
+                        <ButtonPrimary name="Começar" />
+                    </Link>
                 </div>
             </section>
         </main>
