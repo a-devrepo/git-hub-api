@@ -19,6 +19,7 @@
   border-radius: 4px;
   padding: 8px 20px;
   margin-top: 12px;
+  font-size: 14px;
 }
 
 .search-bar input:focus {
@@ -28,4 +29,18 @@
 .search-bar input::placeholder {
   color: var(--dsc-color-font-placeholder-primary);
   font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  .card h1 {
+    font-size: 38px;
+  }
+
+  .search-bar input::placeholder {
+    font-size: 16px;
+  }
+
+  .search-bar input {
+    font-size: 16px;
+  }
 }
