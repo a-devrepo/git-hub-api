@@ -12,7 +12,8 @@ h1 {
   font-weight: 500;
 }
 
-.section-description p {
-  font-size: 16px;
-  font-weight: 700;
+@media (min-width: 576px) {
+  h1 {
+    font-size: 24px;
+  }
 }
