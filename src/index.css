@@ -4,7 +4,8 @@
   --dsc-color-bg-primary: #fff;
   --dsc-color-bg-secondary: #1890ff;
 
-  --dsc-color-card-bg: #e6f7ff;
+  --dsc-color-card-bg-primary: #e6f7ff;
+  --dsc-color-card-bg-secondary: #fff;
   --dsc-color-card-border-primary: #d9d9d9;
   --dsc-color-card-border-secondary: #f5f5f5;
   --dsc-color-card-title-primary: #1890ff;
@@ -14,7 +15,7 @@
 
   --dsc-color-font-primary: #000;
   --dsc-color-font-secondary: #fff;
-  --dsc-color-font-tertiary: #7e7e7e;
+  --dsc-color-font-tertiary: #737373;
 
   --dsc-color-font-placeholder-primary: #bfbfbf;
   --dsc-color-font-placeholder-secondary: #5c5858;
@@ -58,5 +59,5 @@ body {
 }
 
 main {
-  padding: 0 20px;
+  padding: 0 10px;
 }

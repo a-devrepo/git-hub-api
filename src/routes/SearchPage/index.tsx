@@ -1,7 +1,8 @@
 import './styles.css';
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import ButtonPrimary from '../../components/ButtonPrimary';
+import FormButton from '../../components/FormButton';
+
 
 type FormData = {
     userName: string;
@@ -9,11 +10,17 @@ type FormData = {
 
 export default function SearchPage() {
     const [formData, setFormData] = useState<FormData>({ userName: '' })
+    const navigate = useNavigate();
 
     function handleInputUserNameChange(event: any) {
         const value = event.target.value;
-        const userName = event.target.name;
-        setFormData({ ...formData, [userName]: value })
+        const name = event.target.name;
+        setFormData({ ...formData, [name]: value })
+    }
+
+    function handleFormSubmit(event: any) {
+        event.preventDefault();
+        navigate(`user-details/${formData.userName}`);
     }
 
     return (
@@ -23,15 +30,15 @@ export default function SearchPage() {
                 <div className="card" >
                     <h1>Encontre um perfil no Github</h1>
 
-                    <form className='search-bar' action="">
+                    <form className='search-bar' onSubmit={handleFormSubmit}>
                         <div>
                             <input type="text" name="userName" value={formData.userName} onChange={handleInputUserNameChange} placeholder="Usuário Github" />
                         </div>
+                        <FormButton name="Encontrar" ></FormButton>
                     </form>
-                    <ButtonPrimary name="Encontrar" ></ButtonPrimary>
                 </div>
-                <Outlet />
             </section>
+            <Outlet />
         </main>
 
     )
