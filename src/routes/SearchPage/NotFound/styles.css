@@ -1,0 +1,10 @@
+.section-title h1 {
+  font-size: 24px;
+  color: var(--dsc-color-font-primary);
+}
+
+@media (min-width: 576px) {
+  .section-title h1 {
+    font-size: 38px;
+  }
+}

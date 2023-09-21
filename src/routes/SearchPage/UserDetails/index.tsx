@@ -1,13 +1,14 @@
 import './styles.css';
-import { UserDTO } from '../../models/user';
-import * as userService from '../../services/user-service';
+import { UserDTO } from '../../../models/user';
+import * as userService from '../../../services/user-service';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import UserDetailsCard from '../UserDetailsCard';
+import { useNavigate, useParams } from 'react-router-dom';
+import UserDetailsCard from '../../../components/UserDetailsCard';
 
 export default function UserDetails() {
     const params = useParams();
     const [user, setUser] = useState<UserDTO>();
+    const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -23,7 +24,7 @@ export default function UserDetails() {
                 })
             })
             .catch(error => {
-                navigate("/")
+                navigate("../not-found")
             })
     }, [])
 
