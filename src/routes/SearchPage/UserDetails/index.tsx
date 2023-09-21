@@ -14,7 +14,6 @@ export default function UserDetails() {
     useEffect(() => {
         userService.findByUserName(String(params.userName))
             .then(response => {
-                console.log(response.data)
                 setUser({
                     avatar_url: response.data.avatar_url,
                     url: response.data.url,

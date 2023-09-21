@@ -10,7 +10,7 @@ export default function UserDetailsCard({ user }: Props) {
             <div className='user-info-card'>
                 <h4>Informações</h4>
                 <div className='user-info-field'>
-                    <p><span>Perfil: </span>{user.url} </p>
+                    <p><span>Perfil: </span> <a href={user.url} target='blank'>{user.url}</a></p>
                 </div>
                 <div className='user-info-field'>
                     <p><span>Seguidores: </span>{user.followers} </p>

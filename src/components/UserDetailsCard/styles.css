@@ -43,6 +43,10 @@
   overflow: hidden;
 }
 
+.user-info-field a {
+  color: var(--dsc-color-font-placeholder-tertiary);
+}
+
 .user-info-field p {
   color: var(--dsc-color-font-tertiary);
   font-size: 14px;
